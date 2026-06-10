@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool is_ok(const string &s) {
-        int l = 0, r = s.size() - 1;
+        int l = {}, r = (int)s.size() - 1;
         while (l < r) {
             if (s[l++] != s[r--]) {
                 return false;
@@ -10,7 +10,7 @@ public:
         return true;
     }
     string firstPalindrome(const vector<string>& x) {
-        for (int i = 0; i < (int)x.size(); ++i) {
+        for (int i = {}; i < (int)x.size(); ++i) {
             if (is_ok(x[i])) {
                 return x[i];
             }
